@@ -27,10 +27,8 @@
 </head>
 <body>
 
-  <!-- Background particles -->
   <div id="particles-js" aria-hidden="true"></div>
 
-  <!-- Header / Navbar -->
   <header class="site-header">
     <div class="container nav">
       <a href="#home" class="brand">
@@ -42,6 +40,7 @@
       <nav class="nav-menu">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="#status" class="nav-link">Trạng thái</a>
         <a href="#join" class="nav-link">Tham gia</a>
         <a href="#gallery" class="nav-link">Ảnh</a>
         <a href="#rules" class="nav-link">Luật</a>
@@ -96,21 +95,38 @@
     </div>
   </section>
 
-  <!-- Join -->
-  <section id="join" class="section alt">
+  <!-- STATUS: Trạng thái server (MỚI) -->
+  <section id="status" class="section alt">
     <div class="container grid-2">
       <div>
-        <h2 class="section-title">Cách tham gia</h2>
-        <ol class="steps">
-          <li>Cài <strong>Minecraft Java 1.20.x</strong></li>
-          <li>Vào <em>Multiplayer → Add Server</em></li>
-          <li>Nhập IP: <strong>cozysky.mcviet.top</strong> – Port: <strong>25774</strong></li>
-        </ol>
-        <div class="cta-row">
-          <a href="https://dsc.gg/cozysky" target="_blank" class="btn btn-primary"><i class="fa-brands fa-discord"></i> Tham gia Discord</a>
-          <a href="#rules" class="btn btn-ghost"><i class="fa-solid fa-scroll"></i> Xem luật</a>
+        <h2 class="section-title">Trạng thái máy chủ</h2>
+        <p class="muted">Cập nhật trực tiếp từ API • Tự làm mới mỗi 30 giây.</p>
+
+        <div class="card status-card" style="padding:16px">
+          <div class="status-row">
+            <span class="dot" id="status-dot" aria-hidden="true"></span>
+            <span id="status-text"><em>Đang kiểm tra…</em></span>
+          </div>
+          <div class="status-grid">
+            <div class="status-item">
+              <div class="status-label">Người chơi</div>
+              <div class="status-value" id="status-players">—</div>
+            </div>
+            <div class="status-item">
+              <div class="status-label">Phiên bản</div>
+              <div class="status-value" id="status-version">—</div>
+            </div>
+            <div class="status-item">
+              <div class="status-label">MOTD</div>
+              <div class="status-value" id="status-motd">—</div>
+            </div>
+          </div>
+          <div class="muted" style="margin-top:8px;font-size:12px">
+            Nguồn dữ liệu: mcapi.us
+          </div>
         </div>
       </div>
+
       <div class="card stats">
         <div class="stat">
           <span class="stat-label">Phiên bản</span>
@@ -128,6 +144,38 @@
           <span class="stat-label">Cộng đồng</span>
           <span class="stat-value">Discord</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join -->
+  <section id="join" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title">Cách tham gia</h2>
+        <ol class="steps">
+          <li>Cài <strong>Minecraft Java 1.20.x</strong></li>
+          <li>Vào <em>Multiplayer → Add Server</em></li>
+          <li>Nhập IP: <strong>cozysky.mcviet.top</strong> – Port: <strong>25774</strong></li>
+        </ol>
+        <div class="cta-row">
+          <a href="https://dsc.gg/cozysky" target="_blank" class="btn btn-primary"><i class="fa-brands fa-discord"></i> Tham gia Discord</a>
+          <a href="#rules" class="btn btn-ghost"><i class="fa-solid fa-scroll"></i> Xem luật</a>
+        </div>
+      </div>
+      <div class="card mini-ip">
+        <div class="ip-line"><i class="fa-solid fa-server"></i> <strong>cozysky.mcviet.top</strong></div>
+        <div class="ip-line"><i class="fa-solid fa-hashtag"></i> Port <strong>25774</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title">Ảnh</h2>
+      <div class="gallery">
+        <img src="https://files.catbox.moe/68yv5u.jpeg" alt="Cozy Sky Screenshot">
       </div>
     </div>
   </section>

@@ -154,3 +154,12 @@ body{
 
 /* Selection */
 ::selection { background: rgba(237,167,0,.35); color:#111; }
+/* Status widget */
+.status-card .status-row{ display:flex; align-items:center; gap:10px; margin-bottom:10px; font-weight:700; }
+.status-card .dot{ width:10px; height:10px; border-radius:50%; background:#ff4d4d; box-shadow:0 0 0 3px rgba(255,77,77,.15); }
+.status-card .dot.is-online{ background:#51d36b; box-shadow:0 0 0 3px rgba(81,211,107,.18); }
+.status-card .status-grid{ display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; margin-top:8px; }
+.status-card .status-item{ background: rgba(255,255,255,.04); border:1px solid var(--border); border-radius:12px; padding:10px; }
+.status-card .status-label{ color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+.status-card .status-value{ font-weight:700; margin-top:4px; }
+@media (max-width: 860px){ .status-card .status-grid{ grid-template-columns: 1fr; } }

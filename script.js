@@ -32,10 +32,7 @@ if (window.particlesJS) {
     interactivity: {
       detect_on: 'canvas',
       events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-      modes: {
-        repulse: { distance: 100, duration: 0.4 },
-        push: { particles_nb: 3 }
-      }
+      modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 3 } }
     },
     retina_detect: true
   });
@@ -48,6 +45,56 @@ document.querySelectorAll('.nav-link').forEach(a => {
     if (cb && cb.checked) cb.checked = false;
   });
 });
+
+// ---- Minecraft Status (mcapi.us) ----
+const IP = 'cozysky.mcviet.top';
+const PORT = 25774;
+const ENDPOINT = `https://mcapi.us/server/status?ip=${encodeURIComponent(IP)}&port=${PORT}`;
+
+function setStatusUI({ online, playersNow, playersMax, motd, version }) {
+  const dot = document.getElementById('status-dot');
+  const txt = document.getElementById('status-text');
+  const p = document.getElementById('status-players');
+  const v = document.getElementById('status-version');
+  const m = document.getElementById('status-motd');
+
+  if (!dot || !txt || !p || !v || !m) return;
+
+  dot.classList.toggle('is-online', !!online);
+  txt.textContent = online ? 'Online' : 'Offline';
+  p.textContent = online ? `${playersNow}/${playersMax || '?'}` : '—';
+  v.textContent = version || '—';
+  m.textContent = motd || '—';
+}
+
+async function fetchStatus() {
+  try {
+    const resp = await fetch(ENDPOINT, { cache: 'no-store' });
+    const data = await resp.json();
+
+    const online = !!data.online;
+    const playersNow = data.players?.now ?? 0;
+    const playersMax = data.players?.max ?? null;
+
+    // motd có thể ở data.motd hoặc data.motd?.clean (tùy API)
+    const motd = (data.motd && (data.motd.clean || data.motd)) || '';
+    const version = data.server?.name || data.server?.protocol || '';
+
+    setStatusUI({
+      online,
+      playersNow,
+      playersMax,
+      motd: (Array.isArray(motd) ? motd.join(' ') : String(motd)).slice(0, 140),
+      version: String(version)
+    });
+  } catch (e) {
+    setStatusUI({ online: false, playersNow: 0, playersMax: 0, motd: 'Không thể lấy dữ liệu', version: '' });
+  }
+}
+
+// gọi lần đầu + tự làm mới mỗi 30s
+fetchStatus();
+setInterval(fetchStatus, 30000);
 
 // Register Service Worker
 if ('serviceWorker' in navigator) {

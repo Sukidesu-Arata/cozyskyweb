@@ -1,227 +1,379 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Cozy Sky | Minecraft Skyblock VN</title>
-  <meta name="description" content="Cozy Sky - máy chủ Minecraft Skyblock Việt Nam. Java 1.20.x. IP: cozysky.mcviet.top:25774. Tham gia Discord: dsc.gg/cozysky">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Cozy Sky - Skyblock Việt Nam">
-  <meta property="og:description" content="Java 1.20.x • IP: cozysky.mcviet.top:25774 • Discord: dsc.gg/cozysky">
-  <meta property="og:image" content="https://files.catbox.moe/68yv5u.jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-  <link rel="icon" type="image/png" href="https://files.catbox.moe/8i0b0z.png" />
-  <link rel="preload" as="image" href="https://files.catbox.moe/8i0b0z.png">
-  <link rel="preload" as="image" href="https://files.catbox.moe/68yv5u.jpeg">
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Cozy Sky - Minecraft Server | Skyblock & SMP | Java 1.20.X">
+    <meta name="keywords" content="cozysky, minecraft, server, skyblock, smp, java, mcviet">
+    <meta name="author" content="Cozy Sky">
+    <meta property="og:title" content="Cozy Sky - Minecraft Server">
+    <meta property="og:description" content="Server Minecraft chất lượng cao - Skyblock & SMP - Java 1.20.X">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://files.catbox.moe/68yv5u.jpeg">
+    <title>Cozy Sky - Minecraft Server</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="https://files.catbox.moe/8i0b0z.png" type="image/png">
 </head>
 <body>
-
-  <div id="particles-js" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#home" class="brand">
-        <img src="https://files.catbox.moe/8i0b0z.png" alt="Cozy Sky Logo" class="brand-logo">
-        <span class="brand-text">Cozy&nbsp;Sky/&gt;</span>
-      </a>
-      <input id="nav-toggle" type="checkbox" />
-      <label for="nav-toggle" class="hamburger" aria-label="Mở menu"><span></span></label>
-      <nav class="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">Giới thiệu</a>
-        <a href="#status" class="nav-link">Trạng thái</a>
-        <a href="#join" class="nav-link">Tham gia</a>
-        <a href="#gallery" class="nav-link">Ảnh</a>
-        <a href="#rules" class="nav-link">Luật</a>
-        <a href="#contact" class="nav-link">Liên hệ</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Chào mừng đến</p>
-        <h1 class="display">Cozy Sky</h1>
-        <p class="lead"><span class="typing-text"></span></p>
-
-        <div class="hero-actions">
-          <a href="#join" class="btn btn-primary"><i class="fa-solid fa-play"></i> Tham gia ngay</a>
-          <a href="https://dsc.gg/cozysky" target="_blank" class="btn btn-ghost"><i class="fa-brands fa-discord"></i> Vào Discord</a>
-        </div>
-
-        <div class="hero-details">
-          <div><i class="fa-solid fa-server"></i> IP: <strong>cozysky.mcviet.top</strong> • Port <strong>25774</strong></div>
-          <div><i class="fa-solid fa-cube"></i> Hỗ trợ <strong>Java 1.20.x</strong></div>
-        </div>
-      </div>
-      <div class="hero-art">
-        <img class="hero-logo" src="https://files.catbox.moe/8i0b0z.png" alt="Cozy Sky Logo">
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container grid-2">
-      <div>
-        <h2 class="section-title">Giới thiệu</h2>
-        <p class="muted">
-          Cozy Sky là máy chủ <strong>Skyblock</strong> thân thiện dành cho cộng đồng Việt Nam.
-          Tập trung vào trải nghiệm mượt, cân bằng kinh tế và các sự kiện vui nhộn theo mùa.
-        </p>
-        <ul class="checklist">
-          <li>Đảo riêng nâng cấp theo cấp bậc</li>
-          <li>Kinh tế / đấu giá / cửa hàng</li>
-          <li>Sự kiện &amp; nhiệm vụ hằng ngày</li>
-          <li>Hỗ trợ cộng đồng qua Discord</li>
-        </ul>
-      </div>
-      <div class="card banner">
-        <img src="https://files.catbox.moe/68yv5u.jpeg" alt="Cozy Sky Banner">
-      </div>
-    </div>
-  </section>
-
-  <!-- STATUS: Trạng thái server (MỚI) -->
-  <section id="status" class="section alt">
-    <div class="container grid-2">
-      <div>
-        <h2 class="section-title">Trạng thái máy chủ</h2>
-        <p class="muted">Cập nhật trực tiếp từ API • Tự làm mới mỗi 30 giây.</p>
-
-        <div class="card status-card" style="padding:16px">
-          <div class="status-row">
-            <span class="dot" id="status-dot" aria-hidden="true"></span>
-            <span id="status-text"><em>Đang kiểm tra…</em></span>
-          </div>
-          <div class="status-grid">
-            <div class="status-item">
-              <div class="status-label">Người chơi</div>
-              <div class="status-value" id="status-players">—</div>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://files.catbox.moe/8i0b0z.png" alt="Cozy Sky Logo" class="logo-img">
+                <span class="logo-text">Cozy Sky</span>
             </div>
-            <div class="status-item">
-              <div class="status-label">Phiên bản</div>
-              <div class="status-value" id="status-version">—</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#features" class="nav-link">Tính năng</a></li>
+                <li><a href="#rules" class="nav-link">Nội quy</a></li>
+                <li><a href="#join" class="nav-link">Tham gia</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <div class="status-item">
-              <div class="status-label">MOTD</div>
-              <div class="status-value" id="status-motd">—</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Chào mừng đến với</p>
+                <h1 class="hero-name">Cozy Sky</h1>
+                <h2 class="hero-title">
+                    <span class="typing-text"></span>
+                </h2>
+                <p class="hero-description">
+                    Server Minecraft chất lượng cao với Skyblock & SMP - Hỗ trợ Java 1.20.X
+                </p>
+                <div class="server-info-box">
+                    <div class="info-item">
+                        <i class="fas fa-server"></i>
+                        <div>
+                            <span class="info-label">IP Server</span>
+                            <span class="info-value" id="server-ip">cozysky.mcviet.top</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-network-wired"></i>
+                        <div>
+                            <span class="info-label">Port</span>
+                            <span class="info-value">25774</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-gamepad"></i>
+                        <div>
+                            <span class="info-label">Phiên bản</span>
+                            <span class="info-value">Java 1.20.X</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="copyIP()">
+                        <i class="fas fa-copy"></i> Copy IP
+                    </button>
+                    <a href="https://dsc.gg/cozysky" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-discord"></i> Discord
+                    </a>
+                </div>
+                <div class="server-status">
+                    <span class="status-dot"></span>
+                    <span id="status-text">Đang kiểm tra...</span>
+                </div>
             </div>
-          </div>
-          <div class="muted" style="margin-top:8px;font-size:12px">
-            Nguồn dữ liệu: mcapi.us
-          </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="https://files.catbox.moe/68yv5u.jpeg" alt="Cozy Sky Banner">
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="card stats">
-        <div class="stat">
-          <span class="stat-label">Phiên bản</span>
-          <span class="stat-value">Java 1.20.x</span>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Giới thiệu Server</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-paragraph">
+                        <span class="highlight">Cozy Sky</span> là một server Minecraft chất lượng cao, 
+                        mang đến trải nghiệm chơi game tuyệt vời với hai chế độ chính: 
+                        <strong>Skyblock</strong> và <strong>SMP (Survival Multiplayer)</strong>.
+                    </p>
+                    <p class="about-paragraph">
+                        Với đội ngũ staff nhiệt tình, hệ thống bảo mật chặt chẽ và cộng đồng thân thiện, 
+                        Cozy Sky là nơi lý tưởng để bạn xây dựng, sáng tạo và kết nối với những người chơi khác.
+                    </p>
+                    <p class="about-paragraph">
+                        Server được tối ưu hóa để mang lại hiệu suất tốt nhất, 
+                        hỗ trợ Java Edition phiên bản 1.20.X với nhiều tính năng độc đáo.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users stat-icon"></i>
+                            <h3 class="stat-number" data-count="100">0+</h3>
+                            <p class="stat-label">Người chơi</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-crown stat-icon"></i>
+                            <h3 class="stat-number">99.9%</h3>
+                            <p class="stat-label">Uptime</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-shield-alt stat-icon"></i>
+                            <h3 class="stat-number">24/7</h3>
+                            <p class="stat-label">Bảo vệ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <i class="fas fa-cloud"></i>
+                            <h4>Skyblock</h4>
+                            <p>Sinh tồn trên những hòn đảo bay giữa bầu trời</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-tree"></i>
+                            <h4>SMP</h4>
+                            <p>Survival multiplayer với bạn bè và cộng đồng</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Hiệu suất cao</h4>
+                            <p>Server được tối ưu, chơi mượt mà</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-heart"></i>
+                            <h4>Cộng đồng</h4>
+                            <p>Thân thiện, hỗ trợ nhiệt tình</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="stat">
-          <span class="stat-label">IP</span>
-          <span class="stat-value">cozysky.mcviet.top</span>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Tính năng nổi bật</h2>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Skyblock</h3>
+                    <p>Chế độ Skyblock với nhiều thử thách và phần thưởng hấp dẫn. Xây dựng đảo của bạn từ con số 0!</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>SMP</h3>
+                    <p>Survival Multiplayer với bản đồ rộng lớn, hợp tác hoặc cạnh tranh với người chơi khác.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Bảo mật</h3>
+                    <p>Hệ thống chống hack, cheat và bảo vệ dữ liệu người chơi một cách tốt nhất.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Cộng đồng</h3>
+                    <p>Tham gia cộng đồng Discord sôi động với nhiều sự kiện và hoạt động thú vị.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Plugin độc quyền</h3>
+                    <p>Nhiều plugin được code riêng, mang đến trải nghiệm độc đáo không có ở đâu khác.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Sự kiện</h3>
+                    <p>Sự kiện thường xuyên với phần thưởng giá trị và nhiều hoạt động cộng đồng.</p>
+                </div>
+            </div>
         </div>
-        <div class="stat">
-          <span class="stat-label">Port</span>
-          <span class="stat-value">25774</span>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="rules">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nội quy Server</h2>
+            <div class="rules-header" data-aos="fade-up">
+                <i class="fas fa-scroll"></i>
+                <h3>NỘI QUY SKYBLOCK / SMP</h3>
+            </div>
+            <div class="rules-container">
+                <div class="rule-card" data-aos="fade-up">
+                    <div class="rule-number">1</div>
+                    <div class="rule-content">
+                        <h4><i class="fas fa-ban"></i> Cấm hack, cheat, exploit</h4>
+                        <ul>
+                            <li><i class="fas fa-times-circle"></i> Mọi phần mềm gian lận như X-ray, Fly, KillAura, AutoClick... đều cấm tuyệt đối</li>
+                            <li><i class="fas fa-check-circle"></i> Optifine, Shaders, và minimap (không hiện ore/mob) được phép</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rule-number">2</div>
+                    <div class="rule-content">
+                        <h4><i class="fas fa-bug"></i> Cấm lợi dụng bug / dupe</h4>
+                        <ul>
+                            <li><i class="fas fa-times-circle"></i> Không sao chép vật phẩm, bug tiền, hay dùng lỗi để trục lợi</li>
+                            <li><i class="fas fa-comment-dots"></i> Nếu phát hiện bug, hãy báo ngay cho staff thay vì lợi dụng</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rule-number">3</div>
+                    <div class="rule-content">
+                        <h4><i class="fas fa-tools"></i> Xây dựng và farm hợp lý</h4>
+                        <ul>
+                            <li><i class="fas fa-times-circle"></i> Không tạo máy farm gây lag (mob quá nhiều, redstone loop, 0-tick...)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rule-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="rule-number">4</div>
+                    <div class="rule-content">
+                        <h4><i class="fas fa-handshake"></i> Ứng xử trong game</h4>
+                        <ul>
+                            <li><i class="fas fa-times-circle"></i> Không toxic, spam chat, hoặc quấy rối người khác</li>
+                            <li><i class="fas fa-heart"></i> Hãy tôn trọng người chơi khác dù là địch hay đồng minh</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rules-footer" data-aos="fade-up">
+                <p><i class="fas fa-exclamation-triangle"></i> Vi phạm nội quy sẽ bị xử phạt nghiêm khắc (kick, ban tạm thời hoặc vĩnh viễn)</p>
+            </div>
         </div>
-        <div class="stat">
-          <span class="stat-label">Cộng đồng</span>
-          <span class="stat-value">Discord</span>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="join">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Cách tham gia</h2>
+            <div class="join-steps">
+                <div class="step-card" data-aos="fade-up">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-download step-icon"></i>
+                    <h3>Chuẩn bị Minecraft</h3>
+                    <p>Tải Minecraft Java Edition phiên bản 1.20.X</p>
+                </div>
+                <div class="step-arrow" data-aos="fade-up">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-plus step-icon"></i>
+                    <h3>Thêm Server</h3>
+                    <p>Vào Multiplayer > Add Server</p>
+                </div>
+                <div class="step-arrow" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-keyboard step-icon"></i>
+                    <h3>Nhập thông tin</h3>
+                    <p>IP: cozysky.mcviet.top<br>Port: 25774</p>
+                </div>
+                <div class="step-arrow" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-play step-icon"></i>
+                    <h3>Vào chơi!</h3>
+                    <p>Join server và bắt đầu phiêu lưu</p>
+                </div>
+            </div>
+            
+            <div class="join-cta" data-aos="fade-up">
+                <h3>Sẵn sàng tham gia?</h3>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="copyIP()">
+                        <i class="fas fa-copy"></i> Copy IP: cozysky.mcviet.top:25774
+                    </button>
+                    <a href="https://dsc.gg/cozysky" target="_blank" class="btn btn-secondary btn-large">
+                        <i class="fab fa-discord"></i> Tham gia Discord
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://files.catbox.moe/8i0b0z.png" alt="Cozy Sky Logo">
+                    <h3>Cozy Sky</h3>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h4>Server</h4>
+                        <p>IP: cozysky.mcviet.top</p>
+                        <p>Port: 25774</p>
+                        <p>Version: Java 1.20.X</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Liên kết</h4>
+                        <a href="#home">Trang chủ</a>
+                        <a href="#about">Giới thiệu</a>
+                        <a href="#features">Tính năng</a>
+                        <a href="#rules">Nội quy</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Cộng đồng</h4>
+                        <a href="https://dsc.gg/cozysky" target="_blank">
+                            <i class="fab fa-discord"></i> Discord
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Cozy Sky. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copy notification -->
+    <div id="copy-notification" class="copy-notification">
+        <i class="fas fa-check-circle"></i> Đã copy IP vào clipboard!
     </div>
-  </section>
 
-  <!-- Join -->
-  <section id="join" class="section">
-    <div class="container grid-2">
-      <div>
-        <h2 class="section-title">Cách tham gia</h2>
-        <ol class="steps">
-          <li>Cài <strong>Minecraft Java 1.20.x</strong></li>
-          <li>Vào <em>Multiplayer → Add Server</em></li>
-          <li>Nhập IP: <strong>cozysky.mcviet.top</strong> – Port: <strong>25774</strong></li>
-        </ol>
-        <div class="cta-row">
-          <a href="https://dsc.gg/cozysky" target="_blank" class="btn btn-primary"><i class="fa-brands fa-discord"></i> Tham gia Discord</a>
-          <a href="#rules" class="btn btn-ghost"><i class="fa-solid fa-scroll"></i> Xem luật</a>
-        </div>
-      </div>
-      <div class="card mini-ip">
-        <div class="ip-line"><i class="fa-solid fa-server"></i> <strong>cozysky.mcviet.top</strong></div>
-        <div class="ip-line"><i class="fa-solid fa-hashtag"></i> Port <strong>25774</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rules -->
-  <section id="rules" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Luật chơi</h2>
-      <pre class="rules">
-➤ 1. Cấm hack, cheat, exploit.
-✦ Mọi phần mềm gian lận như X-ray, Fly, KillAura, AutoClick... đều cấm tuyệt đối ❌
-✦ Optifine, Shaders, và minimap (không hiện ore/mob) được phép 🌿
-
-➤ 2. Cấm lợi dụng bug / dupe.
-✦ Không sao chép vật phẩm, bug tiền, hay dùng lỗi để trục lợi ⚠️
-✦ Nếu phát hiện bug, hãy báo ngay cho staff thay vì lợi dụng 💬
-
-➤ 3. Xây dựng và farm hợp lý.
-✦ Không tạo máy farm gây lag (mob quá nhiều, redstone loop, 0-tick...) ⚙️
-
-➤ 4. Ứng xử trong game.
-✦ Không toxic, spam chat, hoặc quấy rối người khác 📢
-✦ Hãy tôn trọng người chơi khác dù là địch hay đồng minh 💪
-      </pre>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container grid-2">
-      <div>
-        <h2 class="section-title">Liên hệ</h2>
-        <p class="muted">Cần hỗ trợ? Hãy vào Discord để được trợ giúp nhanh nhất.</p>
-        <div class="socials">
-          <a class="social" href="https://dsc.gg/cozysky" target="_blank" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-        </div>
-      </div>
-      <div class="card mini-ip">
-        <div class="ip-line"><i class="fa-solid fa-server"></i> <strong>cozysky.mcviet.top</strong></div>
-        <div class="ip-line"><i class="fa-solid fa-hashtag"></i> Port <strong>25774</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Cozy Sky. All rights reserved.</span>
-      <a href="https://dsc.gg/cozysky" target="_blank" class="footer-link"><i class="fa-brands fa-discord"></i> Discord</a>
-    </div>
-  </footer>
-
-  <!-- Vendor JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-  <!-- App JS -->
-  <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
